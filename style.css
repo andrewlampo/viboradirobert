@@ -1,0 +1,95 @@
+html, body {
+  margin: 0; padding: 0;
+  height: 100%;
+  background: #081a2b;
+  font-family: -apple-system, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+#game { display:block; width:100vw; height:100vh; }
+
+#hud{
+  position: fixed;
+  top: env(safe-area-inset-top);
+  left: 0; right: 0;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+#hud .title{ font-weight: 800; letter-spacing: 0.5px; font-size: 14px; opacity: 0.95;}
+#hud .scores{ display:flex; gap: 14px; font-weight: 800; }
+
+#controls{
+  position: fixed;
+  left: 0; right: 0;
+  bottom: env(safe-area-inset-bottom);
+  padding: 14px 14px 18px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: auto;
+}
+#controls .left{ display:flex; gap: 10px; }
+#controls .right{ display:flex; }
+.btn{
+  width: 68px; height: 68px;
+  border: none;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 26px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.btn:active{ transform: translateY(1px); }
+.fire{ width: 86px; height: 86px; border-radius: 24px; font-size: 32px; background: rgba(255,255,255,0.22); }
+
+#overlay{
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+}
+.hidden{ display:none !important; }
+.card{
+  width: min(92vw, 420px);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 24px;
+  padding: 18px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+.big{ font-size: 22px; font-weight: 900; letter-spacing: 0.6px; }
+.small{ margin-top: 10px; font-size: 14px; font-weight: 700; }
+.muted{ opacity: 0.85; font-weight: 600; }
+.start{
+  margin-top: 14px;
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  font-weight: 900;
+  font-size: 16px;
+  color: #0b1a2b;
+  background: rgba(255,255,255,0.9);
+}
+#toast{
+  position: fixed;
+  top: calc(env(safe-area-inset-top) + 54px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.92);
+  color: #0b1a2b;
+  font-weight: 900;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}

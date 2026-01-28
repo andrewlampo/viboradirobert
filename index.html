@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>LA VIBORA DI ROBERT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="title">LA VIBORA DI ROBERT</div>
+    <div class="scores">
+      <div>Score: <span id="score">0</span></div>
+      <div>Best: <span id="best">0</span></div>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <div id="controls">
+    <div class="left">
+      <button id="leftBtn" class="btn">⬅️</button>
+      <button id="rightBtn" class="btn">➡️</button>
+    </div>
+    <div class="right">
+      <button id="fireBtn" class="btn fire">🎾</button>
+    </div>
+  </div>
+
+  <div id="overlay" class="hidden">
+    <div class="card">
+      <div class="big">LA VIBORA DI ROBERT</div>
+      <div class="small">Tocca per iniziare</div>
+      <div class="small muted">+10 colpito • -3 se scappa (min 0) • Best Score salvato</div>
+      <button id="startBtn" class="start">PLAY</button>
+    </div>
+  </div>
+
+  <div id="toast" class="hidden">NUOVO RECORD!</div>
+
+  <script src="game.js"></script>
+</body>
+</html>
